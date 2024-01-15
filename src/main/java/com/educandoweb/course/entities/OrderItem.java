@@ -1,6 +1,7 @@
 package com.educandoweb.course.entities;
 
 import java.io.Serializable;
+import java.security.PublicKey;
 import java.util.Objects;
 
 import com.educandoweb.course.entities.pk.OrderItemPK;
@@ -83,6 +84,10 @@ public class OrderItem implements Serializable{
 		return Objects.equals(id, other.id);
 	}
 	
+
+	public double getSubTotal() {
+		return price * quantity;
+	}
 	
 	
 }
