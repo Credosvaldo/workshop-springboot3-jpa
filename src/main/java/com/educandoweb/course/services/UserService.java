@@ -3,13 +3,18 @@ package com.educandoweb.course.services;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 
 import com.educandoweb.course.entities.User;
 import com.educandoweb.course.repositories.UserRepository;
+import com.educandoweb.course.services.exeptions.DataBaseExeption;
 import com.educandoweb.course.services.exeptions.ResourceNotFoundExeption;
 
+import lombok.extern.log4j.Log4j2;
+
 @Service
+@Log4j2
 public class UserService {
 
 	@Autowired
@@ -28,7 +33,15 @@ public class UserService {
 	}
 
 	public void delete(Long id) {
-		userRepository.deleteById(id);
+		try {
+			userRepository.deleteById(id);
+			log.info("É FOI COMPLETO");
+		}
+		catch(DataIntegrityViolationException e) {
+			throw new DataBaseExeption(e.getMessage());
+		}
+
+		log.info("OK");
 	}
 
 	public User update(Long id, User obj) {
