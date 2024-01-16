@@ -11,6 +11,7 @@ import com.educandoweb.course.repositories.UserRepository;
 import com.educandoweb.course.services.exeptions.DataBaseExeption;
 import com.educandoweb.course.services.exeptions.ResourceNotFoundExeption;
 
+import jakarta.persistence.EntityNotFoundException;
 import lombok.extern.log4j.Log4j2;
 
 @Service
@@ -19,11 +20,11 @@ public class UserService {
 
 	@Autowired
 	private UserRepository userRepository;
-	
+
 	public List<User> findAll() {
 		return userRepository.findAll();
 	}
-	
+
 	public User findById(Long id) {
 		return userRepository.findById(id).orElseThrow(() -> new ResourceNotFoundExeption(id));
 	}
@@ -36,8 +37,7 @@ public class UserService {
 		try {
 			userRepository.deleteById(id);
 			log.info("É FOI COMPLETO");
-		}
-		catch(DataIntegrityViolationException e) {
+		} catch (DataIntegrityViolationException e) {
 			throw new DataBaseExeption(e.getMessage());
 		}
 
@@ -45,10 +45,20 @@ public class UserService {
 	}
 
 	public User update(Long id, User obj) {
-		User entity = userRepository.getReferenceById(id);
-		updateData(entity, obj);
 
-		return userRepository.save(entity);
+
+		try {
+			User entity = userRepository.getReferenceById(id);
+
+			updateData(entity, obj);
+
+			return userRepository.save(entity);
+		}
+		catch (EntityNotFoundException e) {
+			throw new ResourceNotFoundExeption(id);
+		}
+
+
 	}
 
 	private void updateData(User entity, User obj) {
@@ -57,5 +67,5 @@ public class UserService {
 		entity.setPhone(obj.getPhone());
 
 	}
-	
+
 }
