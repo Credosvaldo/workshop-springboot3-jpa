@@ -1,0 +1,27 @@
+.searchBar {
+    display: flex;
+}
+
+.searchBar input {
+    width: 30em;
+    border-radius: 5px;
+    background: #FFF;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.searchBar button {
+    color: white;
+    border: 0;
+    position: relative;
+    right: 2.7em;
+    width: 2.5em;
+    height: 2em;
+    margin: auto 0;
+    text-align: center;
+}
+
+
+.searchBar svg {
+    margin-bottom: 0.2em;
+}
+
