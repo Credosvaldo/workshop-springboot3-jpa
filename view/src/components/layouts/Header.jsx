@@ -23,8 +23,14 @@ function Header() {
 
             </div>
 
-            <div className='d-flex bg-color-2'>
-                
+            <div className='d-flex bg-color-2 justify-content-between p-2 text-white fw-bold'>
+                <div>Categoria 1</div>
+                <div>Categoria 2</div>
+                <div>Categoria 3</div>
+                <div>Categoria 4</div>
+                <div>Categoria 5</div>
+                <div>Categoria 6</div>
+                <div>Categoria 7</div>
             </div>
         </div>
     )
