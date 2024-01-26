@@ -7,7 +7,7 @@ import SearchBar from './SearchBar'
 function Header() {
 
     return (
-        <div>
+        <header>
             <div className="d-flex justify-content-between px-5 align-items-center bg-color-1">
                 <img className='logo' src={logo} alt="Logo" />
 
@@ -32,7 +32,7 @@ function Header() {
                 <div>Categoria 6</div>
                 <div>Categoria 7</div>
             </div>
-        </div>
+        </header>
     )
 }
 

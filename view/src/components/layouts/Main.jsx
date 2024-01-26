@@ -12,7 +12,7 @@ import Confirm from '../pages/Confirm'
 function Main() {
 
     return (
-        <div className='bg-primary vh-100'>
+        <main className='vh-100 container'>
             <Routes>
                 <Route path='/' Component={Home} />
                 <Route path='/order' Component={Order} />
@@ -22,7 +22,7 @@ function Main() {
                 <Route path='/confirm' Component={Confirm} />
             </Routes>
 
-        </div>
+        </main>
     )
 }
 

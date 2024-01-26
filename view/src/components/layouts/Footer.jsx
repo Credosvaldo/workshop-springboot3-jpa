@@ -4,7 +4,7 @@ import { FaPix, FaCcVisa, FaCcMastercard, FaFileInvoice, FaCcAmazonPay, FaCcAmex
 function Footer() {
 
     return (
-        <div className="row bg-color-4 m-0 bottom-0 text-white p-5">
+        <footer className="row bg-color-4 m-0 bottom-0 text-white p-5">
             
             <div className="d-flex flex-wrap col-4 justify-content-center">
                 <div className="w-75">
@@ -18,13 +18,13 @@ function Footer() {
             <div className="d-flex flex-wrap col-4 justify-content-center">
                 <div className="w-75">
                     <h5>Formas de pagamento</h5>
-                    <div className="display-6 row">
-                        <FaPix className="col-4"></FaPix>
-                        <FaCcVisa className="col-4"></FaCcVisa>
-                        <FaCcMastercard className="col-4"></FaCcMastercard>
-                        <FaFileInvoice className="col-4"></FaFileInvoice>
-                        <FaCcAmazonPay className="col-4"></FaCcAmazonPay>
-                        <FaCcAmex className="col-4"></FaCcAmex>
+                    <div className="display-6">
+                        <FaPix className="m-3"></FaPix>
+                        <FaCcVisa className="m-3"></FaCcVisa>
+                        <FaCcMastercard className="m-3"></FaCcMastercard>
+                        <FaFileInvoice className="m-3"></FaFileInvoice>
+                        <FaCcAmazonPay className="m-3"></FaCcAmazonPay>
+                        <FaCcAmex className="m-3"></FaCcAmex>
 
                     </div>
                 </div>
@@ -35,13 +35,17 @@ function Footer() {
                 <div className="w-75">
                     <h5>Redes sociais</h5>
 
+                    <div>
+                        <FaGithub className="h3"></FaGithub> Github
+                    </div>
 
-                    <FaGithub></FaGithub>
-                    <FaLinkedin></FaLinkedin>
+                    <div>
+                        <FaLinkedin className="h3"></FaLinkedin> Linkedin
+                    </div>
 
                 </div>
             </div>
-        </div>
+        </footer>
     )
 }
 
