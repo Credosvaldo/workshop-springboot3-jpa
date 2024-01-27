@@ -2,9 +2,14 @@ import Card from "../layouts/Card";
 
 function Home() {
 
+    const ratingTest = {
+        value: 4,
+        review: 1546
+    }
+
     return (
-        <div>
-            <div id="carouselExampleIndicators" className="carousel slide">
+        <div className="p-5">
+            <div id="carouselExampleIndicators" className="carousel slide mb-5">
                 <div className="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -32,11 +37,14 @@ function Home() {
             </div>
 
             <div className="row">
-                <div className="col-9 row bg-primary">
-                    <Card />
+                <div className="d-flex  col-9 row">
+                    <Card id={1} image={'https://picsum.photos/300/300/?random=4'} name={"Card 1"} price={2000} rating={ratingTest} spaceClass={`col-lg-4 col-md-6`} />
+                    <Card id={1} image={'https://picsum.photos/300/300/?random=5'} name={"Card 1"} price={2000} rating={ratingTest} spaceClass={`col-lg-4 col-md-6`} />
+                    <Card id={1} image={'https://picsum.photos/300/300/?random=6'} name={"Card 1"} price={2000} rating={ratingTest} spaceClass={`col-lg-4 col-md-6`} />
+                    <Card id={1} image={'https://picsum.photos/300/300/?random=7'} name={"Card 1"} price={2000} rating={ratingTest} spaceClass={`col-lg-4 col-md-6`} />
                 </div>
 
-                <div className="col-3 bg-secondary">
+                <div className="col-3 ">
                     a
                 </div>
             </div>

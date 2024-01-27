@@ -1,14 +1,19 @@
-function Card({id, image, name, rating, price}) {
+import Rating from "./Rating"
+
+import styles from './css/Card.module.css'
+
+
+function Card({id, image, name, rating, price, spaceClass}) {
     
     return (
-        <div>
-            <img src={image} alt="Imagem do produto" />
-            <p>{name}</p>
-            <div>
-                <p> {rating.value} </p>
-                <p>  </p>
+        <div className={`${styles.cardSpace} ${spaceClass}`}>
+            <div className={styles.card}>
+                <img src={image} alt="Imagem do produto" />
+                <p className={styles.title}>{name}</p>
+                <Rating rating={rating} />
+                <h2>R$: {price}</h2>
             </div>
-            <h1>R$: {price}</h1>
+
         </div>
     )
 }
