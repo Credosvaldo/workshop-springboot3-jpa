@@ -1,4 +1,5 @@
 import Card from "../layouts/Card";
+import MostRewidItems from "../layouts/MostRewidItems";
 
 function Home() {
 
@@ -37,16 +38,19 @@ function Home() {
             </div>
 
             <div className="row">
-                <div className="d-flex  col-9 row">
-                    <Card id={1} image={'https://picsum.photos/300/300/?random=4'} name={"Card 1"} price={2000} rating={ratingTest} spaceClass={`col-lg-4 col-md-6`} />
-                    <Card id={1} image={'https://picsum.photos/300/300/?random=5'} name={"Card 1"} price={2000} rating={ratingTest} spaceClass={`col-lg-4 col-md-6`} />
-                    <Card id={1} image={'https://picsum.photos/300/300/?random=6'} name={"Card 1"} price={2000} rating={ratingTest} spaceClass={`col-lg-4 col-md-6`} />
-                    <Card id={1} image={'https://picsum.photos/300/300/?random=7'} name={"Card 1"} price={2000} rating={ratingTest} spaceClass={`col-lg-4 col-md-6`} />
+                <div className="col-9">
+                    <div className="row">
+                        <Card id={1} image={'https://picsum.photos/300/300/?random=4'} name={"Card 1"} price={2000} rating={ratingTest} spaceClass={`col-lg-4 col-md-6`} />
+                        <Card id={1} image={'https://picsum.photos/300/300/?random=5'} name={"Card 1"} price={2000} rating={ratingTest} spaceClass={`col-lg-4 col-md-6`} />
+                        <Card id={1} image={'https://picsum.photos/300/300/?random=6'} name={"Card 1"} price={2000} rating={ratingTest} spaceClass={`col-lg-4 col-md-6`} />
+                        <Card id={1} image={'https://picsum.photos/300/300/?random=7'} name={"Card 1"} price={2000} rating={ratingTest} spaceClass={`col-lg-4 col-md-6`} />
+                    </div>
                 </div>
 
-                <div className="col-3 ">
-                    a
+                <div className="col-3">
+                    <MostRewidItems />
                 </div>
+
             </div>
 
         </div>
