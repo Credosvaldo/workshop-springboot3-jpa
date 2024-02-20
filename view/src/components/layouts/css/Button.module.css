@@ -1,0 +1,41 @@
+:root {
+    --color-1: #4FC26A;
+    --color-2: #578F64;
+    --color-3: #34F461;
+    --color-4: #4A5C4E;
+    --color-5: #28332B;
+}
+
+.button {
+    border-radius: .3em;
+    border: 0;
+    width: 8em;
+    font-size: larger;
+    transition: transform .3s ease-in;
+    min-width: .1em;
+    overflow: hidden;
+}
+
+.positive {
+    color: white;
+    background-color: var(--color-3);
+}
+
+.negative {
+    color: var(--color-3);
+    background-color: rgba(128, 128, 128, 0);
+    border: solid gray 1px ;
+
+}
+
+.button:hover {
+    transform: scale(1.1);
+}
+
+.positive:active {
+    background-color: #34f461a7
+}
+
+.negative:active {
+    background-color: rgba(128, 128, 128, 0.116);
+}
