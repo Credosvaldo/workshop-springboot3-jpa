@@ -1,0 +1,15 @@
+.miniNumberInput {
+    width: 2.2em;
+    height: 2.2em;
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

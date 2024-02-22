@@ -1,0 +1,16 @@
+.filters {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    width: 20em;
+    border: black solid 1px;
+}
+
+.filters h1 {
+    margin-bottom: .7em;
+    text-align: center;
+}
+
+.filters > div {
+    margin-bottom: 1em;
+}

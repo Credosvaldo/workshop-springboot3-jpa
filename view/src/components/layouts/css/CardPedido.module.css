@@ -1,0 +1,20 @@
+.cardPedido {
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    box-shadow: 2px 2px 5px #888888;
+    margin-bottom: 2em;
+
+}
+
+.cardPedido img {
+    margin-right: 1em;
+}
+
+.cardPedido h1 {
+    font-size: 2em;
+}
+
+.cardPedido h2 {
+    font-size: 1em;
+}

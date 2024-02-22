@@ -4,7 +4,7 @@ function Input({name, placeholder, type}) {
 
 
     return (
-        <div className=" mb-2">
+        <div className=" mb-3">
             <label htmlFor={name}>{name}: </label>
             <input className='form-control' placeholder={placeholder} type={type} name={name} id={name} />
         </div>

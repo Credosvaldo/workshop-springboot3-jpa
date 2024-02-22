@@ -1,15 +1,21 @@
 import logo from '../../img/logo.png'
 
 import { FaUser, FaCartShopping, FaHeart } from 'react-icons/fa6'
+import { Link } from 'react-router-dom'
 
 import SearchBar from './SearchBar'
 
 function Header() {
 
+    const to = '/'
+
     return (
         <header>
             <div className="d-flex justify-content-between px-5 align-items-center bg-color-1">
-                <img className='logo' src={logo} alt="Logo" />
+                
+                <Link to={to}>
+                    <img className='logo' src={logo} alt="Logo" />
+                </Link>
 
 
                 <SearchBar></SearchBar>
@@ -18,7 +24,10 @@ function Header() {
                 <div className='text-white d-flex'>
                     <h1 className='mx-2'> <FaCartShopping ></FaCartShopping> </h1>
                     <h1 className='mx-2'> <FaHeart></FaHeart> </h1>
-                    <h1 className='mx-2'> <FaUser></FaUser> </h1>
+
+                    <Link to={'/login'} className='text-white'> 
+                        <h1 className='mx-2'> <FaUser></FaUser> </h1>
+                    </Link>
                 </div>
 
             </div>

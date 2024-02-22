@@ -19,7 +19,7 @@ function Main() {
             <Routes>
                 <Route path='/' Component={Home} />
                 <Route path='/order' Component={Order} />
-                <Route path='/product/{id}' Component={Product} />
+                <Route path='/product' Component={Product} />
                 <Route path='/search' Component={Search} />
                 <Route path='/user' Component={User} />
                 <Route path='/confirm' Component={Confirm} />

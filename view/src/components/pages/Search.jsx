@@ -1,8 +1,17 @@
+import Filters from "../layouts/Filters";
+import Results from "../layouts/Results";
+
 function Home() {
 
     return (
-        <div>
-            <h1>Search</h1>
+        <div className="d-flex pt-5">
+            <div>
+                <Filters />
+            </div>
+
+            <div>
+                <Results />
+            </div>
         </div>
     )
 }

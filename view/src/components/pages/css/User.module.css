@@ -1,0 +1,21 @@
+.user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3em;
+
+    min-height: 100vh;
+}
+
+.user img {
+    height: 10em;
+}
+
+.user h1{
+    font-size: x-large;
+}
+
+.user h2 {
+    font-size: larger;
+    color: rgba(0, 0, 0, 0.499);
+}

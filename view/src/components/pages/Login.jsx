@@ -13,7 +13,7 @@ function Login() {
     }
 
     return (
-        <div className={`${styles.formSpace} d-flex justify-content-center align-items-center flex-column`}>
+        <div className={styles.formSpace}>
             <h1>Login</h1>
             
 
@@ -21,7 +21,7 @@ function Login() {
                 <Input name={'E-mail'} placeholder={'Digite seu e-mail'} type={'text'} />
                 <Input name={'Senha'} placeholder={'Digite sua senha'} type={'password'} />
 
-                <div className='d-flex justify-content-between'>
+                <div className='d-flex justify-content-between mt-4'>
                     <Button name={'Logar'} type={"submit"} kind={'positive'}/>
                     <LinkButton to={'/signup'} text={'Cadastrar'} kind={'negative'} />
                 </div>

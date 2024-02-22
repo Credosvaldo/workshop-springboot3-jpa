@@ -7,7 +7,7 @@ import LinkButton from '../layouts/LinkButton'
 function Signup() {
 
     return (
-        <div className="d-flex align-items-center flex-column m-5">
+        <div className={styles.formSpace}>
             <h1>Signup</h1>
 
             <form className={styles.form}>
